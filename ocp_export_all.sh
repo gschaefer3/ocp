@@ -48,7 +48,7 @@ done
 
 echo "Compressing resources..."
 DATE_TIME=$(date +"%Y%m%d_%H%M%S")
-tar -czf "do316-${NAME}-${DATE_TIME}.tar.gz" "$OUTPUT_DIR" DO316
+tar -czf "${NAME}-${DATE_TIME}.tar.gz" "$OUTPUT_DIR" DO316
 
 echo "Removing output directory..."
 if [ "$(ls -A "$OUTPUT_DIR" | wc -l)" -eq 0 ]; then
