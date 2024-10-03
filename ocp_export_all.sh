@@ -8,7 +8,7 @@ mkdir -p "$OUTPUT_DIR"
 
 # Check if the NAME parameter is provided
 if [ -z "$1" ]; then
-  echo "Error: Please provide a name for the tar file (e.g. do316)"
+  echo "Error: Please provide a name for the tar file (e.g. cluster-1)"
   exit 1
 fi
 
@@ -48,7 +48,7 @@ done
 
 echo "Compressing resources..."
 DATE_TIME=$(date +"%Y%m%d_%H%M%S")
-tar -czf "${NAME}-${DATE_TIME}.tar.gz" "$OUTPUT_DIR" DO316
+tar -czf "${NAME}-${DATE_TIME}.tar.gz" "$OUTPUT_DIR"
 
 echo "Removing output directory..."
 if [ "$(ls -A "$OUTPUT_DIR" | wc -l)" -eq 0 ]; then
